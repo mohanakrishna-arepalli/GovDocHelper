@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PAN Card - Govdochelper</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        background-image: url("../static/img/gradient-background-green-modern-designs_343694-2067.avif");
+        background-size: cover;
+      }
+      .container {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 1rem;
+        background: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1,
+      h2,
+      p {
+        margin-bottom: 1rem;
+        color: black;
+        text-align: center;
+      }
+      h2,
+      p {
+        margin-bottom: 1rem;
+      }
+      ol {
+        margin-left: 2rem;
+      }
+      ul {
+        margin-left: 2rem;
+        list-style-type: disc;
+        text-align: left;
+      }
+      a {
+        color: #4caf50;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .center {
+        text-align: center;
+      }
+      h1 {
+        text-align: center;
+      }
+      #logo {
+        position: absolute;
+
+        width: 100px; /* Adjust the width as needed */
+        height: auto; /* Maintain aspect ratio */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Language Selection Dropdown -->
+
+      <select id="language-select" onchange="changeLanguage()">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+      </select>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+      <img id="logo" src="../static/img/logo.png" alt="Logo" />>
+      <h1 id="main-title">PAN Card</h1>
+
+      <h2 id="form-site-title">Main Site for PAN Card Form Filling</h2>
+      <p id="form-site-info">
+        To fill the PAN Card form and for any updates or queries related to PAN
+        Card, visit the official Income Tax Department website:
+      </p>
+      <p class="center">
+        <a
+          href="https://www.incometaxindia.gov.in"
+          target="_blank"
+          id="form-site-link"
+          >Income Tax Department Official Website</a
+        >
+      </p>
+
+      <h2 id="significance-title">Significance and Use of PAN Card</h2>
+      <p id="significance-info">
+        The PAN (Permanent Account Number) card is a crucial document issued by
+        the Income Tax Department to Indian citizens and entities for financial
+        transactions. It serves as a proof of identity and is essential for
+        various financial and tax-related activities. Its uses include:
+      </p>
+      <ul>
+        <li id="purpose1">Filing income tax returns</li>
+        <li id="purpose2">Opening a bank account</li>
+        <li id="purpose3">Applying for loans</li>
+        <li id="purpose4">Making investments</li>
+        <li id="purpose5">Purchasing property</li>
+      </ul>
+
+      <h2 id="instructions-title">Instructions for Filling PAN Card Form</h2>
+      <ol>
+        <li>
+          <strong id="download-form-title">Download the PAN Card Form:</strong>
+          <span id="download-form-info"
+            >Visit the Income Tax Department website or a designated center to
+            obtain the PAN Card form. The form typically includes fields for
+            personal information, address details, and other relevant
+            data.</span
+          >
+        </li>
+        <li>
+          <strong id="fill-details-title"
+            >Fill in all the Required Details Accurately:</strong
+          >
+          <ul>
+            <li>
+              <strong id="personal-info-title">Personal Information:</strong
+              ><br />
+              Full Name: Enter your full name as per your supporting
+              documents.<br />
+              Date of Birth: Provide your date of birth in the format
+              DD/MM/YYYY.<br />
+              Gender: Select your gender (Male, Female, or Other) as
+              applicable.<br />
+              Address: Provide your current residential address, including house
+              number, street name, locality, city, district, state, and PIN
+              code.
+            </li>
+            <li>
+              <strong id="additional-info-title">Additional Information:</strong
+              ><br />
+              Contact Information: Provide your mobile number and email address
+              (if applicable).<br />
+              Aadhar Number: Enter your Aadhar number if available.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong id="submit-form-title">Submit the Form:</strong>
+          <span id="submit-form-info"
+            >Once you have filled in all the required details, submit the form
+            to the designated center or online through the Income Tax Department
+            website.</span
+          >
+        </li>
+        <li>
+          <strong id="collect-pancard-title">Collect Your PAN Card:</strong>
+          <span id="collect-pancard-info"
+            >After submitting the form, you will receive your PAN card within a
+            few weeks. You can also track the status of your PAN card
+            application online.</span
+          >
+        </li>
+      </ol>
+
+      <script>
+        function changeLanguage() {
+          var language = document.getElementById("language-select").value;
+          switch (language) {
+            case "hi":
+              translateToHindi();
+              break;
+            default:
+              translateToEnglish();
+          }
+        }
+
+        function translateToEnglish() {
+          document.getElementById("main-title").innerHTML = "PAN Card";
+          document.getElementById("form-site-title").innerHTML =
+            "Main Site for PAN Card Form Filling";
+          document.getElementById("form-site-info").innerHTML =
+            "To fill the PAN Card form and for any updates or queries related to PAN Card, visit the official Income Tax Department website:";
+          document.getElementById("form-site-link").innerHTML =
+            "Income Tax Department Official Website";
+          document.getElementById("significance-title").innerHTML =
+            "Significance and Use of PAN Card";
+          document.getElementById("significance-info").innerHTML =
+            "The PAN (Permanent Account Number) card is a crucial document issued by the Income Tax Department to Indian citizens and entities for financial transactions. It serves as a proof of identity and is essential for various financial and tax-related activities. Its uses include:";
+          document.getElementById("purpose1").innerHTML =
+            "Filing income tax returns";
+          document.getElementById("purpose2").innerHTML =
+            "Opening a bank account";
+          document.getElementById("purpose3").innerHTML = "Applying for loans";
+          document.getElementById("purpose4").innerHTML = "Making investments";
+          document.getElementById("purpose5").innerHTML = "Purchasing property";
+          document.getElementById("instructions-title").innerHTML =
+            "Instructions for Filling PAN Card Form";
+          document.getElementById("download-form-title").innerHTML =
+            "Download the PAN Card Form:";
+          document.getElementById("download-form-info").innerHTML =
+            "Visit the Income Tax Department website or a designated center to obtain the PAN Card form. The form typically includes fields for personal information, address details, and other relevant data.";
+          document.getElementById("fill-details-title").innerHTML =
+            "Fill in all the Required Details Accurately:";
+          document.getElementById("personal-info-title").innerHTML =
+            "Personal Information:";
+          document.getElementById("full-name").innerHTML =
+            "Full Name: Enter your full name as per your supporting documents.";
+          document.getElementById("dob").innerHTML =
+            "Date of Birth: Provide your date of birth in the format DD/MM/YYYY.";
+          document.getElementById("gender").innerHTML =
+            "Gender: Select your gender (Male, Female, or Other) as applicable.";
+          document.getElementById("address").innerHTML =
+            "Address: Provide your current residential address, including house number, street name, locality, city, district, state, and PIN code.";
+          document.getElementById("additional-info-title").innerHTML =
+            "Additional Information:";
+          document.getElementById("contact-info").innerHTML =
+            "Contact Information: Provide your mobile number and email address (if applicable).";
+          document.getElementById("aadhar-info").innerHTML =
+            "Aadhar Number: Enter your Aadhar number if available.";
+          document.getElementById("submit-form-title").innerHTML =
+            "Submit the Form:";
+          document.getElementById("submit-form-info").innerHTML =
+            "Once you have filled in all the required details, submit the form to the designated center or online through the Income Tax Department website.";
+          document.getElementById("collect-pancard-title").innerHTML =
+            "Collect Your PAN Card:";
+          document.getElementById("collect-pancard-info").innerHTML =
+            "After submitting the form, you will receive your PAN card within a few weeks. You can also track the status of your PAN card application online.";
+        }
+
+        function translateToHindi() {
+          document.getElementById("main-title").innerHTML = "पैन कार्ड";
+          document.getElementById("form-site-title").innerHTML =
+            "पैन कार्ड फॉर्म भरने के लिए मुख्य साइट";
+          document.getElementById("form-site-info").innerHTML =
+            "पैन कार्ड फॉर्म भरने और पैन कार्ड से संबंधित किसी भी अपडेट या पूछताछ के लिए, आधिकारिक आयकर विभाग की वेबसाइट पर जाएं:";
+          document.getElementById("form-site-link").innerHTML =
+            "आयकर विभाग की आधिकारिक वेबसाइट";
+          document.getElementById("significance-title").innerHTML =
+            "पैन कार्ड का महत्व और उपयोग";
+          document.getElementById("significance-info").innerHTML =
+            "पैन (स्थायी खाता संख्या) कार्ड भारतीय नागरिकों और संस्थाओं को वित्तीय लेन-देन के लिए आयकर विभाग द्वारा जारी एक महत्वपूर्ण दस्तावेज है। यह पहचान का प्रमाण है और विभिन्न वित्तीय और कर-संबंधित गतिविधियों के लिए आवश्यक है। इसके उपयोग में शामिल हैं:";
+          document.getElementById("purpose1").innerHTML =
+            "आयकर रिटर्न दाखिल करना";
+          document.getElementById("purpose2").innerHTML = "बैंक खाता खोलना";
+          document.getElementById("purpose3").innerHTML =
+            "ऋण के लिए आवेदन करना";
+          document.getElementById("purpose4").innerHTML = "निवेश करना";
+          document.getElementById("purpose5").innerHTML = "संपत्ति खरीदना";
+          document.getElementById("instructions-title").innerHTML =
+            "पैन कार्ड फॉर्म भरने के निर्देश";
+          document.getElementById("download-form-title").innerHTML =
+            "पैन कार्ड फॉर्म डाउनलोड करें:";
+          document.getElementById("download-form-info").innerHTML =
+            "आयकर विभाग की वेबसाइट या निर्दिष्ट केंद्र पर जाएं और पैन कार्ड फॉर्म प्राप्त करें। फॉर्म में आमतौर पर व्यक्तिगत जानकारी, पते के विवरण और अन्य प्रासंगिक डेटा के लिए फ़ील्ड होते हैं।";
+          document.getElementById("fill-details-title").innerHTML =
+            "सभी आवश्यक विवरण सही तरीके से भरें:";
+          document.getElementById("personal-info-title").innerHTML =
+            "व्यक्तिगत जानकारी:";
+          document.getElementById("full-name").innerHTML =
+            "पूरा नाम: अपने समर्थन दस्तावेज़ों के अनुसार अपना पूरा नाम दर्ज करें।";
+          document.getElementById("dob").innerHTML =
+            "जन्म तिथि: अपनी जन्म तिथि DD/MM/YYYY प्रारूप में दर्ज करें।";
+          document.getElementById("gender").innerHTML =
+            "लिंग: अपना लिंग चुनें (पुरुष, महिला या अन्य)।";
+          document.getElementById("address").innerHTML =
+            "पता: अपना वर्तमान निवास पता दर्ज करें, जिसमें घर का नंबर, स्ट्रीट नाम, लोकेलिटी, शहर, जिला, राज्य और पिन कोड शामिल हैं।";
+          document.getElementById("additional-info-title").innerHTML =
+            "अतिरिक्त जानकारी:";
+          document.getElementById("contact-info").innerHTML =
+            "संपर्क जानकारी: अपना मोबाइल नंबर और ईमेल पता (यदि लागू हो) प्रदान करें।";
+          document.getElementById("aadhar-info").innerHTML =
+            "आधार नंबर: यदि उपलब्ध हो, तो अपना आधार नंबर दर्ज करें।";
+          document.getElementById("submit-form-title").innerHTML =
+            "फॉर्म जमा करें:";
+          document.getElementById("submit-form-info").innerHTML =
+            "सभी आवश्यक विवरण भरने के बाद, फॉर्म को निर्दिष्ट केंद्र पर या आयकर विभाग की वेबसाइट के माध्यम से ऑनलाइन जमा करें।";
+          document.getElementById("collect-pancard-title").innerHTML =
+            "अपना पैन कार्ड प्राप्त करें:";
+          document.getElementById("collect-pancard-info").innerHTML =
+            "फॉर्म जमा करने के बाद, आपको कुछ हफ्तों के भीतर अपना पैन कार्ड प्राप्त होगा। आप अपने पैन कार्ड आवेदन की स्थिति ऑनलाइन भी ट्रैक कर सकते हैं।";
+        }
+      </script>
+    </div>
+    <link
+      rel="stylesheet"
+      href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css"
+    />
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    <df-messenger
+      project-id="governemnt-bot"
+      agent-id="3876b30c-4b66-4477-91e4-e3bf4bce448f"
+      language-code="en"
+      max-query-length="-1"
+    >
+      <df-messenger-chat-bubble chat-title="PAN Card Assistance">
+      </df-messenger-chat-bubble>
+    </df-messenger>
+    <style>
+      df-messenger {
+        z-index: 999;
+        position: fixed;
+        --df-messenger-font-color: #000;
+        --df-messenger-font-family: Google Sans;
+        --df-messenger-chat-background: #c8e6c9;
+        --df-messenger-message-user-background: #90ee90;
+        --df-messenger-message-bot-background: #fff;
+        bottom: 16px;
+        right: 16px;
+      }
+    </style>
+  </body>
+</html>

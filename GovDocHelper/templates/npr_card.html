@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPR Card - Govdochelper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background-image: url('../static/img/gradient-background-green-modern-designs_343694-2067.avif');
+            background-size: cover;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, p {
+            margin-bottom: 1rem;
+            color: black;
+            text-align: center;
+        }
+        h2, p {
+            margin-bottom: 1rem;
+        }
+        ol {
+            margin-left: 2rem;
+        }
+        ul {
+            margin-left: 2rem;
+            list-style-type: disc;
+        }
+        a {
+            align-items: center;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Language Selection Dropdown -->
+        <select id="language-select" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+        </select>
+
+        <h1 id="main-title">NPR Card</h1>
+
+        <h2 id="form-site-title">Main Site for NPR Card Application</h2>
+        <p id="form-site-info">To apply for the NPR card and for any updates or queries related to NPR, visit the official NPR website:</p>
+        <a href="https://npr.gov.in" target="_blank" id="form-site-link">NPR Official Website</a>
+
+        <h2 id="significance-title">Significance and Use of NPR Card</h2>
+        <p id="significance-info">The NPR card is an identification document issued by the National Population Register of India (NPR). It serves as proof of identity and address and is used for various purposes including:</p>
+        <ul>
+            <li id="purpose1">Government schemes and benefits</li>
+            <li id="purpose2">Electoral purposes</li>
+            <li id="purpose3">Identification for various services</li>
+            <li id="purpose4">Census purposes</li>
+        </ul>
+
+        <h2 id="instructions-title">Instructions for Applying for NPR Card</h2>
+        <ol>
+            <li><strong id="download-form-title">Visit the NPR Website:</strong> <span id="download-form-info">Go to the NPR website to access the application form and related information.</span></li>
+            <li><strong id="fill-details-title">Fill in the Application Form:</strong> <span id="fill-details-info">Fill in the required details accurately in the application form.</span></li>
+            <li><strong id="submit-form-title">Submit the Form:</strong> <span id="submit-form-info">Submit the completed application form along with necessary documents as per the instructions provided.</span></li>
+            <li><strong id="verification-title">Verification Process:</strong> <span id="verification-info">After submission, the application will be verified by the authorities.</span></li>
+            <li><strong id="issue-title">Issue of NPR Card:</strong> <span id="issue-info">Upon successful verification, the NPR card will be issued to the applicant.</span></li>
+        </ol>
+
+        <script>
+            function changeLanguage() {
+                var language = document.getElementById("language-select").value;
+                switch (language) {
+                    case "hi":
+                        translateToHindi();
+                        break;
+                    default:
+                        translateToEnglish();
+                }
+            }
+
+            function translateToEnglish() {
+                document.getElementById("main-title").innerHTML = "NPR Card";
+                document.getElementById("form-site-title").innerHTML = "Main Site for NPR Card Application";
+                document.getElementById("form-site-info").innerHTML = "To apply for the NPR card and for any updates or queries related to NPR, visit the official NPR website:";
+                document.getElementById("form-site-link").innerHTML = "NPR Official Website";
+                document.getElementById("significance-title").innerHTML = "Significance and Use of NPR Card";
+                document.getElementById("significance-info").innerHTML = "The NPR card is an identification document issued by the National Population Register of India (NPR). It serves as proof of identity and address and is used for various purposes including:";
+                document.getElementById("purpose1").innerHTML = "Government schemes and benefits";
+                document.getElementById("purpose2").innerHTML = "Electoral purposes";
+                document.getElementById("purpose3").innerHTML = "Identification for various services";
+                document.getElementById("purpose4").innerHTML = "Census purposes";
+                document.getElementById("instructions-title").innerHTML = "Instructions for Applying for NPR Card";
+                document.getElementById("download-form-title").innerHTML = "Visit the NPR Website:";
+                document.getElementById("download-form-info").innerHTML = "Go to the NPR website to access the application form and related information.";
+                document.getElementById("fill-details-title").innerHTML = "Fill in the Application Form:";
+                document.getElementById("fill-details-info").innerHTML = "Fill in the required details accurately in the application form.";
+                document.getElementById("submit-form-title").innerHTML = "Submit the Form:";
+                document.getElementById("submit-form-info").innerHTML = "Submit the completed application form along with necessary documents as per the instructions provided.";
+                document.getElementById("verification-title").innerHTML = "Verification Process:";
+                document.getElementById("verification-info").innerHTML = "After submission, the application will be verified by the authorities.";
+                document.getElementById("issue-title").innerHTML = "Issue of NPR Card:";
+                document.getElementById("issue-info").innerHTML = "Upon successful verification, the NPR card will be issued to the applicant.";
+            }
+
+            function translateToHindi() {
+                document.getElementById("main-title").innerHTML = "NPR कार्ड";
+                document.getElementById("form-site-title").innerHTML = "NPR कार्ड आवेदन के मुख्य साइट";
+                document.getElementById("form-site-info").innerHTML = "NPR कार्ड के लिए आवेदन करने और NPR से संबंधित किसी भी अपडेट या पूछताछ के लिए, आधिकारिक NPR वेबसाइट पर जाएं:";
+                document.getElementById("form-site-link").innerHTML = "NPR आधिकारिक वेबसाइट";
+                document.getElementById("significance-title").innerHTML = "NPR कार्ड का महत्व और उपयोग";
+                document.getElementById("significance-info").innerHTML = "NPR कार्ड भारतीय राष्ट्रीय जनसंख्या रजिस्टर (NPR) द्वारा जारी एक पहचान प्रमाणपत्र है। यह पहचान और पते का सबूत के रूप में काम करता है और विभिन्न उद्देश्यों के लिए उपयोग किया जाता है, जैसे कि:";
+                document.getElementById("purpose1").innerHTML = "सरकारी योजनाएं और लाभ";
+                document.getElementById("purpose2").innerHTML = "चुनावी उद्देश्य";
+                document.getElementById("purpose3").innerHTML = "विभिन्न सेवाओं के लिए पहचान";
+                document.getElementById("purpose4").innerHTML = "जनगणना के उद्देश्यों";
+                document.getElementById("instructions-title").innerHTML = "NPR कार्ड के लिए आवेदन करने के निर्देश";
+                document.getElementById("download-form-title").innerHTML = "NPR वेबसाइट पर जाएं:";
+                document.getElementById("download-form-info").innerHTML = "आवेदन पत्र और संबंधित जानकारी तक पहुंचने के लिए NPR वेबसाइट पर जाएं।";
+                document.getElementById("fill-details-title").innerHTML = "आवेदन पत्र भरें:";
+                document.getElementById("fill-details-info").innerHTML = "आवश्यक विवरणों को आवेदन पत्र में सही ढंग से भरें।";
+                document.getElementById("submit-form-title").innerHTML = "फॉर्म जमा करें:";
+                document.getElementById("submit-form-info").innerHTML = "निर्देशों के अनुसार पूर्ण आवेदन पत्र को साथ में आवश्यक दस्तावेजों के साथ जमा करें।";
+                document.getElementById("verification-title").innerHTML = "सत्यापन प्रक्रिया:";
+                document.getElementById("verification-info").innerHTML = "जमा करने के बाद, अधिकारियों द्वारा आवेदन की सत्यापन प्रक्रिया होगी।";
+                document.getElementById("issue-title").innerHTML = "NPR कार्ड जारी किया गया:";
+                document.getElementById("issue-info").innerHTML = "सफल सत्यापन के बाद, NPR कार्ड आवेदक को जारी किया जाएगा।";
+            }
+        </script>
+    </body>
+</html>
+

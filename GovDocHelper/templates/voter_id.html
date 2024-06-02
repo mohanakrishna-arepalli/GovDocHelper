@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voter ID - Govdochelper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background-image: url('../static/img/gradient-background-green-modern-designs_343694-2067.avif');
+            background-size: cover;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, p {
+            margin-bottom: 1rem;
+            color: black;
+            text-align: center;
+        }
+        h2, p {
+            margin-bottom: 1rem;
+        }
+        ol {
+            margin-left: 2rem;
+        }
+        ul {
+            margin-left: 2rem;
+            list-style-type: disc;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Language Selection Dropdown -->
+        <select id="language-select" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+        </select>
+
+        <h1 id="main-title">Voter ID</h1>
+
+        <h2 id="form-site-title">Main Site for Voter ID Form Filling</h2>
+        <p id="form-site-info">To fill the Voter ID form and for any updates or queries related to Voter ID, visit the official Election Commission of India website:</p>
+        <p class="center"><a href="https://eci.gov.in" target="_blank" id="form-site-link">ECI Official Website</a></p>
+
+        <h2 id="significance-title">Significance and Use of Voter ID</h2>
+        <p id="significance-info">The Voter ID card is a crucial document issued by the Election Commission of India to Indian citizens who are eligible to vote. It serves as a proof of identity and address and is essential for participating in the democratic process. Its uses include:</p>
+        <ul>
+            <li id="purpose1">Casting votes in elections</li>
+            <li id="purpose2">Applying for various government services</li>
+            <li id="purpose3">Availing government subsidies</li>
+            <li id="purpose4">Proof of identity and address</li>
+        </ul>
+
+        <h2 id="instructions-title">Instructions for Filling Voter ID Form</h2>
+        <ol>
+            <li><strong id="download-form-title">Download the Voter ID Form:</strong> <span id="download-form-info">Visit the ECI website or a designated center to obtain the Voter ID form. The form typically includes fields for personal information and address details.</span></li>
+            <li><strong id="fill-details-title">Fill in all the Required Details Accurately:</strong>
+                <ul>
+                    <li><strong id="personal-info-title">Personal Information:</strong>
+                        <ul>
+                            <li id="full-name">Full Name: Enter your full name as per your supporting documents.</li>
+                            <li id="dob">Date of Birth: Provide your date of birth in the format DD/MM/YYYY.</li>
+                            <li id="gender">Gender: Select your gender (Male, Female, or Other) as applicable.</li>
+                            <li id="address">Address: Provide your current residential address, including house number, street name, locality, city, district, state, and PIN code.</li>
+                        </ul>
+                    </li>
+                    <li><strong id="additional-info-title">Additional Information:</strong>
+                        <ul>
+                            <li id="contact-info">Contact Information: Provide your mobile number and email address (if applicable).</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><strong id="submit-form-title">Submit the Form:</strong> <span id="submit-form-info">Once you have filled in all the required details, submit the form to the designated center or online through the ECI website.</span></li>
+            <li><strong id="collect-voterid-title">Collect Your Voter ID:</strong> <span id="collect-voterid-info">After submitting the form, you will receive your Voter ID card within a few weeks. You can also track the status of your Voter ID application online.</span></li>
+        </ol>
+
+        <script>
+            function changeLanguage() {
+                var language = document.getElementById("language-select").value;
+                switch (language) {
+                    case "hi":
+                        translateToHindi();
+                        break;
+                    default:
+                        translateToEnglish();
+                }
+            }
+
+            function translateToEnglish() {
+                document.getElementById("main-title").innerHTML = "Voter ID";
+                document.getElementById("form-site-title").innerHTML = "Main Site for Voter ID Form Filling";
+                document.getElementById("form-site-info").innerHTML = "To fill the Voter ID form and for any updates or queries related to Voter ID, visit the official Election Commission of India website:";
+                document.getElementById("form-site-link").innerHTML = "ECI Official Website";
+                document.getElementById("significance-title").innerHTML = "Significance and Use of Voter ID";
+                document.getElementById("significance-info").innerHTML = "The Voter ID card is a crucial document issued by the Election Commission of India to Indian citizens who are eligible to vote. It serves as a proof of identity and address and is essential for participating in the democratic process. Its uses include:";
+                document.getElementById("purpose1").innerHTML = "Casting votes in elections";
+                document.getElementById("purpose2").innerHTML = "Applying for various government services";
+                document.getElementById("purpose3").innerHTML = "Availing government subsidies";
+                document.getElementById("purpose4").innerHTML = "Proof of identity and address";
+                document.getElementById("instructions-title").innerHTML = "Instructions for Filling Voter ID Form";
+                document.getElementById("download-form-title").innerHTML = "Download the Voter ID Form:";
+                document.getElementById("download-form-info").innerHTML = "Visit the ECI website or a designated center to obtain the Voter ID form. The form typically includes fields for personal information and address details.";
+                document.getElementById("fill-details-title").innerHTML = "Fill in all the Required Details Accurately:";
+                document.getElementById("personal-info-title").innerHTML = "Personal Information:";
+                document.getElementById("full-name").innerHTML = "Full Name: Enter your full name as per your supporting documents.";
+                document.getElementById("dob").innerHTML = "Date of Birth: Provide your date of birth in the format DD/MM/YYYY.";
+                document.getElementById("gender").innerHTML = "Gender: Select your gender (Male, Female, or Other) as applicable.";
+                document.getElementById("address").innerHTML = "Address: Provide your current residential address, including house number, street name, locality, city, district, state, and PIN code.";
+                document.getElementById("additional-info-title").innerHTML = "Additional Information:";
+                document.getElementById("contact-info").innerHTML = "Contact Information: Provide your mobile number and email address (if applicable).";
+                document.getElementById("submit-form-title").innerHTML = "Submit the Form:";
+                document.getElementById("submit-form-info").innerHTML = "Once you have filled in all the required details, submit the form to the designated center or online through the ECI website.";
+                document.getElementById("collect-voterid-title").innerHTML = "Collect Your Voter ID:";
+                document.getElementById("collect-voterid-info").innerHTML = "After submitting the form, you will receive your Voter ID card within a few weeks. You can also track the status of your Voter ID application online.";
+            }
+
+            function translateToHindi() {
+                document.getElementById("main-title").innerHTML = "मतदाता पहचान पत्र";
+                document.getElementById("form-site-title").innerHTML = "मतदाता पहचान पत्र फॉर्म भरने के लिए मुख्य साइट";
+                document.getElementById("form-site-info").innerHTML = "मतदाता पहचान पत्र फॉर्म भरने और मतदाता पहचान पत्र से संबंधित किसी भी अपडेट या पूछताछ के लिए, आधिकारिक चुनाव आयोग की वेबसाइट पर जाएं:";
+                document.getElementById("form-site-link").innerHTML = "ECI आधिकारिक वेबसाइट";
+                document.getElementById("significance-title").innerHTML = "मतदाता पहचान पत्र का महत्व और उपयोग";
+                document.getElementById("significance-info").innerHTML = "मतदाता पहचान पत्र भारतीय नागरिकों को चुनाव आयोग द्वारा जारी किया गया एक महत्वपूर्ण दस्तावेज है, जो मतदान के योग्य हैं। यह पहचान और पते का प्रमाण होता है और लोकतांत्रिक प्रक्रिया में भाग लेने के लिए आवश्यक है। इसके उपयोग में शामिल हैं:";
+                document.getElementById("purpose1").innerHTML = "चुनावों में मतदान करना";
+                document.getElementById("purpose2").innerHTML = "विभिन्न सरकारी सेवाओं के लिए आवेदन करना";
+                document.getElementById("purpose3").innerHTML = "सरकारी सब्सिडी प्राप्त करना";
+                document.getElementById("purpose4").innerHTML = "पहचान और पते का प्रमाण";
+                document.getElementById("instructions-title").innerHTML = "मतदाता पहचान पत्र फॉर्म भरने के निर्देश";
+                document.getElementById("download-form-title").innerHTML = "मतदाता पहचान पत्र फॉर्म डाउनलोड करें:";
+                document.getElementById("download-form-info").innerHTML = "ECI वेबसाइट या एक निर्दिष्ट केंद्र पर जाएं और मतदाता पहचान पत्र फॉर्म प्राप्त करें। फॉर्म में आमतौर पर व्यक्तिगत जानकारी और पते के विवरण के लिए फ़ील्ड होते हैं।";
+                document.getElementById("fill-details-title").innerHTML = "सभी आवश्यक विवरण सही तरीके से भरें:";
+                document.getElementById("personal-info-title").innerHTML = "व्यक्तिगत जानकारी:";
+                document.getElementById("full-name").innerHTML = "पूरा नाम: अपने समर्थन दस्तावेज़ों के अनुसार अपना पूरा नाम दर्ज करें।";
+                document.getElementById("dob").innerHTML = "जन्म तिथि: अपनी जन्म तिथि DD/MM/YYYY प्रारूप में दर्ज करें।";
+                document.getElementById("gender").innerHTML = "लिंग: अपना लिंग चुनें (पुरुष, महिला या अन्य)।";
+                document.getElementById("address").innerHTML = "पता: अपना वर्तमान निवास पता दर्ज करें, जिसमें घर का नंबर, स्ट्रीट नाम, लोकेलिटी, शहर, जिला, राज्य और पिन कोड शामिल हैं।";
+                document.getElementById("additional-info-title").innerHTML = "अतिरिक्त जानकारी:";
+                document.getElementById("contact-info").innerHTML = "संपर्क जानकारी: अपना मोबाइल नंबर और ईमेल पता (यदि लागू हो) प्रदान करें।";
+                document.getElementById("submit-form-title").innerHTML = "फॉर्म जमा करें:";
+                document.getElementById("submit-form-info").innerHTML = "सभी आवश्यक विवरण भरने के बाद, फॉर्म को निर्दिष्ट केंद्र पर या ECI वेबसाइट के माध्यम से ऑनलाइन जमा करें।";
+                document.getElementById("collect-voterid-title").innerHTML = "अपना मतदाता पहचान पत्र प्राप्त करें:";
+                document.getElementById("collect-voterid-info").innerHTML = "फॉर्म जमा करने के बाद, आपको कुछ हफ्तों के भीतर अपना मतदाता पहचान पत्र प्राप्त होगा। आप अपने मतदाता पहचान पत्र आवेदन की स्थिति ऑनलाइन भी ट्रैक कर सकते हैं।";
+            }
+        </script>
+    </div>
+</body>
+</html>

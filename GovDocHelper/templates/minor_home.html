@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Govdochelper</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        background-image: url("../static/img/gradient-background-green-modern-designs_343694-2067.avif");
+        background-size: cover;
+      }
+      header {
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        padding: 1rem 0;
+        position: relative;
+      }
+      /* Existing CSS */
+
+      .logout {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+      }
+
+      .logout form {
+        margin: 0;
+      }
+
+      .logout input[type="submit"] {
+        background-color: #f44336; /* Red background color */
+        color: white; /* White text color */
+        border: none;
+        padding: 0.5rem 1rem; /* Adjust padding as needed */
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s; /* Smooth transition */
+      }
+
+      .logout input[type="submit"]:hover {
+        background-color: #d32f2f; /* Darker red on hover */
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 1rem;
+        background: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #add361;
+      }
+      h1 {
+        text-align: center;
+        font-weight: bold;
+        font-family: "Times New Roman", Times, serif;
+        text-decoration: solid;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        background: #e9e9e9;
+        margin: 0.5rem 0;
+        padding: 1rem;
+        border-radius: 5px;
+        transition: background 0.3s;
+        cursor: pointer;
+      }
+      li:hover {
+        background: #4caf50;
+      }
+      .info {
+        display: none;
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+        background: #f9f9f9;
+        border-left: 4px solid #4caf50;
+      }
+      .active .info {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        src="static/img/logo.png"
+        alt="GovDocHelper Logo"
+        style="height: 50px; margin-right: 10px"
+      />
+      <h1>GovDocHelper</h1>
+      <p>Your one-stop solution for government document assistance</p>
+      <div class="logout">
+        <form action="{{ url_for('logout') }}" method="POST">
+          <input type="submit" value="Logout" />
+        </form>
+      </div>
+    </header>
+    <div class="container">
+      <h2>Select the Government ID</h2>
+      <ul>
+        <li onclick="location.href='/aadhaar'"><span>Aadhaar Card</span></li>
+        <li onclick="location.href='/passport'">
+          <span>Indian Passport</span>
+        </li>
+        <li onclick="location.href='/posb_card'"><span>POSB Card</span></li>
+        <li onclick="location.href='/caste_certificate'">
+          <span>Caste Certificate</span>
+        </li>
+      </ul>
+    </div>
+    <script>
+      document.querySelectorAll("li").forEach((item) => {
+        item.addEventListener("click", () => {
+          item.classList.toggle("active");
+        });
+      });
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css"
+    />
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    <df-messenger
+      project-id="abiding-hull-424418-v2"
+      agent-id="3db69eac-687a-4d62-8dde-7df011f7e607"
+      language-code="en"
+      max-query-length="-1"
+    >
+      <df-messenger-chat-bubble chat-title="General Doc Assist">
+      </df-messenger-chat-bubble>
+    </df-messenger>
+    <style>
+      df-messenger {
+        z-index: 999;
+        position: fixed;
+        --df-messenger-font-color: #000;
+        --df-messenger-font-family: Roboto Mono;
+        --df-messenger-chat-background: #c8e6c9;
+        --df-messenger-message-user-background: #90ee90;
+        --df-messenger-message-bot-background: #fff;
+        bottom: 16px;
+        right: 16px;
+      }
+    </style>
+  </body>
+</html>

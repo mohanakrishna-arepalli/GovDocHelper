@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ration Card - Govdochelper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background-image: url('../static/img/gradient-background-green-modern-designs_343694-2067.avif');
+            background-size: cover;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, p {
+            margin-bottom: 1rem;
+            color: black;
+            text-align: center;
+        }
+        h2, p {
+            margin-bottom: 1rem;
+        }
+        ol {
+            margin-left: 2rem;
+        }
+        ul {
+            margin-left: 2rem;
+            list-style-type: disc;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Language Selection Dropdown -->
+        <select id="language-select" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+        </select>
+
+        <h1 id="main-title">Ration Card</h1>
+
+        <h2 id="form-site-title">Main Site for Ration Card Application</h2>
+        <p id="form-site-info">To apply for a Ration Card and for any updates or queries related to Ration Cards, visit the official Ration Card portal:</p>
+        <p class="center"><a href="https://www.india.gov.in" target="_blank" id="form-site-link">National Portal of India</a></p>
+
+        <h2 id="significance-title">Significance and Use of Ration Card</h2>
+        <p id="significance-info">A Ration Card is an essential document issued by the government that entitles the holder to purchase essential commodities at subsidized rates. Its uses include:</p>
+        <ul>
+            <li id="purpose1">Access to subsidized food grains</li>
+            <li id="purpose2">Identification for various government schemes</li>
+            <li id="purpose3">Proof of residence</li>
+        </ul>
+
+        <h2 id="instructions-title">Instructions for Obtaining Ration Card</h2>
+        <ol>
+            <li><strong id="document-requirements-title">Gather Required Documents:</strong> <span id="document-requirements-info">Collect necessary documents such as proof of identity, address proof, income certificate, and passport-sized photographs.</span></li>
+            <li><strong id="application-process-title">Application Process:</strong>
+                <ul>
+                    <li id="online-application">Online Application: Visit the official Ration Card portal and fill out the application form with accurate details.</li>
+                    <li id="offline-application">Offline Application: Obtain the application form from the nearest Food, Civil Supplies, and Consumer Affairs office and submit it along with the required documents.</li>
+                </ul>
+            </li>
+            <li><strong id="verification-title">Verification:</strong> <span id="verification-info">After submitting the application, authorities will conduct verification of the provided information and documents.</span></li>
+            <li><strong id="issue-title">Issuance of Ration Card:</strong> <span id="issue-info">Upon successful verification, the Ration Card will be issued to the applicant.</span></li>
+            <li><strong id="renewal-title">Renewal:</strong> <span id="renewal-info">Renew the Ration Card as per the renewal period specified by the authorities.</span></li>
+        </ol>
+
+        <script>
+            function changeLanguage() {
+                var language = document.getElementById("language-select").value;
+                switch (language) {
+                    case "hi":
+                        translateToHindi();
+                        break;
+                    default:
+                        translateToEnglish();
+                }
+            }
+
+            function translateToEnglish() {
+                document.getElementById("main-title").innerHTML = "Ration Card";
+                document.getElementById("form-site-title").innerHTML = "Main Site for Ration Card Application";
+                document.getElementById("form-site-info").innerHTML = "To apply for a Ration Card and for any updates or queries related to Ration Cards, visit the official Ration Card portal:";
+                document.getElementById("form-site-link").innerHTML = "National Portal of India";
+                document.getElementById("significance-title").innerHTML = "Significance and Use of Ration Card";
+                document.getElementById("significance-info").innerHTML = "A Ration Card is an essential document issued by the government that entitles the holder to purchase essential commodities at subsidized rates. Its uses include:";
+                document.getElementById("purpose1").innerHTML = "Access to subsidized food grains";
+                document.getElementById("purpose2").innerHTML = "Identification for various government schemes";
+                document.getElementById("purpose3").innerHTML = "Proof of residence";
+                document.getElementById("instructions-title").innerHTML = "Instructions for Obtaining Ration Card";
+                document.getElementById("document-requirements-title").innerHTML = "Gather Required Documents:";
+                document.getElementById("document-requirements-info").innerHTML = "Collect necessary documents such as proof of identity, address proof, income certificate, and passport-sized photographs.";
+                document.getElementById("application-process-title").innerHTML = "Application Process:";
+                document.getElementById("online-application").innerHTML = "Online Application: Visit the official Ration Card portal and fill out the application form with accurate details.";
+                document.getElementById("offline-application").innerHTML = "Offline Application: Obtain the application form from the nearest Food, Civil Supplies, and Consumer Affairs office and submit it along with the required documents.";
+                document.getElementById("verification-title").innerHTML = "Verification:";
+                document.getElementById("verification-info").innerHTML = "After submitting the application, authorities will conduct verification of the provided information and documents.";
+                document.getElementById("issue-title").innerHTML = "Issuance of Ration Card:";
+                document.getElementById("issue-info").innerHTML = "Upon successful verification, the Ration Card will be issued to the applicant.";
+                document.getElementById("renewal-title").innerHTML = "Renewal:";
+                document.getElementById("renewal-info").innerHTML = "Renew the Ration Card as per the renewal period specified by the authorities.";
+            }
+        
+            function translateToHindi() {
+                document.getElementById("main-title").innerHTML = "राशन कार्ड";
+                document.getElementById("form-site-title").innerHTML = "राशन कार्ड के आवेदन के लिए मुख्य साइट";
+                document.getElementById("form-site-info").innerHTML = "राशन कार्ड के लिए आवेदन करने और राशन कार्ड से संबंधित किसी भी अपडेट या पूछताछ के लिए, आधिकारिक राशन कार्ड पोर्टल पर जाएं:";
+                document.getElementById("form-site-link").innerHTML = "भारत का राष्ट्रीय पोर्टल";
+                document.getElementById("significance-title").innerHTML = "राशन कार्ड का महत्व और उपयोग";
+                document.getElementById("significance-info").innerHTML = "राशन कार्ड सरकार द्वारा जारी एक महत्वपूर्ण दस्तावेज है जो धारक को सब्सिडीत दरों पर आवश्यक वस्त्रादि खरीदने का अधिकार प्रदान करता है। इसके उपयोग निम्नलिखित हैं:";
+                document.getElementById("purpose1").innerHTML = "सब्सिडीत अनाज खरीदने का पहुंच";
+                document.getElementById("purpose2").innerHTML = "विभिन्न सरकारी योजनाओं के लिए पहचान";
+                document.getElementById("purpose3").innerHTML = "निवास का प्रमाण";
+                document.getElementById("instructions-title").innerHTML = "राशन कार्ड प्राप्ति के लिए निर्देश";
+                document.getElementById("document-requirements-title").innerHTML = "आवश्यक दस्तावेज एकत्र करें:";
+                document.getElementById("document-requirements-info").innerHTML = "पहचान प्रमाण, पते का प्रमाण, आय प्रमाणपत्र और पासपोर्ट साइज़ फोटोग्राफ जैसे आवश्यक दस्तावेज एकत्र करें।";
+                document.getElementById("application-process-title").innerHTML = "आवेदन प्रक्रिया:";
+                document.getElementById("online-application").innerHTML = "ऑनलाइन आवेदन: आधिकारिक राशन कार्ड पोर्टल पर जाएं और सटीक विवरणों के साथ आवेदन पत्र भरें।";
+                document.getElementById("offline-application").innerHTML = "ऑफ़लाइन आवेदन: निकटतम खाद्य, नागरिक आपूर्ति और उपभोक्ता मामले कार्यालय से आवेदन पत्र प्राप्त करें और आवश्यक दस्तावेज़ों के साथ जमा करें।";
+                document.getElementById("verification-title").innerHTML = "सत्यापन:";
+                document.getElementById("verification-info").innerHTML = "आवेदन प्रस्तुत करने के बाद, प्राधिकरणों द्वारा प्रदत्त जानकारी और दस्तावेज़ों का सत्यापन किया जाएगा।";
+                document.getElementById("issue-title").innerHTML = "राशन कार्ड जारी करना:";
+                document.getElementById("issue-info").innerHTML = "सफल सत्यापन के बाद, राशन कार्ड आवेदक को जारी किया जाएगा।";
+                document.getElementById("renewal-title").innerHTML = "नवीकरण:";
+                document.getElementById("renewal-info").innerHTML = "अधिकारियों द्वारा निर्धारित नवीनीकरण अवधि के अनुसार राशन कार्ड को नवीनीकरण करें।";
+            }
+        </script>
+    </body>
+</html>

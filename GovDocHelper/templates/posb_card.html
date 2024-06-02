@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSB Card - Govdochelper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background-image: url('../static/img/gradient-background-green-modern-designs_343694-2067.avif');
+            background-size: cover;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2,
+        p {
+            margin-bottom: 1rem;
+            color: black;
+            text-align: center;
+        }
+
+        h2,
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ol {
+            margin-left: 2rem;
+        }
+
+        ul {
+            margin-left: 2rem;
+            list-style-type: disc;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Language Selection Dropdown -->
+        <select id="language-select" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+        </select>
+
+        <h1 id="main-title">POSB Card</h1>
+
+        <h2 id="form-site-title">Main Site for POSB Card Application</h2>
+        <p id="form-site-info">To apply for a POSB card or for any updates or queries related to POSB cards, visit the official POSB website:</p>
+        <a href="https://www.indiapost.gov.in/Financial/Pages/Content/Post-Office-Savings-Bank.aspx" target="_blank" id="form-site-link">POSB Official Website</a>
+
+        <h2 id="significance-title">Significance and Use of POSB Card</h2>
+        <p id="significance-info">The POSB (Post Office Savings Bank) card is a financial instrument provided by India Post to facilitate banking services for individuals. It offers various benefits including:</p>
+        <ul>
+            <li id="benefit1">Safe and secure savings account</li>
+            <li id="benefit2">Interest on savings deposits</li>
+            <li id="benefit3">Accessibility to banking services in rural areas</li>
+            <li id="benefit4">Small savings schemes like recurring deposits, fixed deposits, etc.</li>
+            <li id="benefit5">Remittance services</li>
+        </ul>
+
+        <h2 id="instructions-title">Instructions for Applying for a POSB Card</h2>
+        <ol>
+            <li><strong id="download-form-title">Download the Application Form:</strong> <span id="download-form-info">Visit the POSB website or your nearest post office to obtain the application form for opening a POSB account. The form typically includes fields for personal information, nominee details, and other required information.</span></li>
+            <li><strong id="fill-details-title">Fill in all the Required Details Accurately:</strong>
+                <ul>
+                    <li id="personal-info">Personal Information: Fill in your name, date of birth, address, and other relevant details as per the instructions provided in the form.</li>
+                    <li id="nominee-info">Nominee Details: Provide the details of your nominee including name, relationship, and contact information.</li>
+                    <li id="deposit-info">Deposit Details: Specify the initial deposit amount and choose the type of account you wish to open.</li>
+                </ul>
+            </li>
+            <li><strong id="submit-form-title">Submit the Form:</strong> <span id="submit-form-info">Once you have filled in all the required details, submit the form along with the necessary documents to your nearest post office or as instructed by the POSB website.</span></li>
+            <li><strong id="receive-card-title">Receive Your POSB Card:</strong> <span id="receive-card-info">After the verification process, your POSB card will be issued to you. You can start using it for banking transactions and avail of the benefits offered by POSB.</span></li>
+        </ol>
+
+        <script>
+            function changeLanguage() {
+                var language = document.getElementById("language-select").value;
+                switch (language) {
+                    case "hi":
+                        translateToHindi();
+                        break;
+                    default:
+                        translateToEnglish();
+                }
+            }
+
+            function translateToEnglish() {
+                document.getElementById("main-title").innerHTML = "POSB Card";
+                document.getElementById("form-site-title").innerHTML = "Main Site for POSB Card Application";
+                document.getElementById("form-site-info").innerHTML = "To apply for a POSB card or for any updates or queries related to POSB cards, visit the official POSB website:";
+                document.getElementById("form-site-link").innerHTML = "POSB Official Website";
+                document.getElementById("significance-title").innerHTML = "Significance and Use of POSB Card";
+                document.getElementById("significance-info").innerHTML = "The POSB (Post Office Savings Bank) card is a financial instrument provided by India Post to facilitate banking services for individuals. It offers various benefits including:";
+                document.getElementById("benefit1").innerHTML = "Safe and secure savings account";
+                document.getElementById("benefit2").innerHTML = "Interest on savings deposits";
+                document.getElementById("benefit3").innerHTML = "Accessibility to banking services in rural areas";
+                document.getElementById("benefit4").innerHTML = "Small savings schemes like recurring deposits, fixed deposits, etc.";
+                document.getElementById("benefit5").innerHTML = "Remittance services";
+                document.getElementById("instructions-title").innerHTML = "Instructions for Applying for a POSB Card";
+                document.getElementById("download-form-title").innerHTML = "Download the Application Form:";
+                document.getElementById("download-form-info").innerHTML = "Visit the POSB website or your nearest post office to obtain the application form for opening a POSB account. The form typically includes fields for personal information, nominee details, and other required information.";
+                document.getElementById("fill-details-title").innerHTML = "Fill in all the Required Details Accurately:";
+                document.getElementById("personal-info").innerHTML = "Personal Information: Fill in your name, date of birth, address, and other relevant details as per the instructions provided in the form.";
+                document.getElementById("nominee-info").innerHTML = "Nominee Details: Provide the details of your nominee including name, relationship, and contact information.";
+                document.getElementById("deposit-info").innerHTML = "Deposit Details: Specify the initial deposit amount and choose the type of account you wish to open.";
+                document.getElementById("submit-form-title").innerHTML = "Submit the Form:";
+                document.getElementById("submit-form-info").innerHTML = "Once you have filled in all the required details, submit the form along with the necessary documents to your nearest post office or as instructed by the POSB website.";
+                document.getElementById("receive-card-title").innerHTML = "Receive Your POSB Card:";
+                document.getElementById("receive-card-info").innerHTML = "After the verification process, your POSB card will be issued to you. You can start using it for banking transactions and avail of the benefits offered by POSB.";
+            }
+
+            function translateToHindi() {
+                document.getElementById("main-title").innerHTML = "पीओएसबी कार्ड";
+                document.getElementById("form-site-title").innerHTML = "पीओएसबी कार्ड आवेदन के लिए मुख्य साइट";
+                document.getElementById("form-site-info").innerHTML = "पीओएसबी कार्ड के लिए आवेदन करने या पीओएसबी कार्ड से संबंधित किसी भी अपडेट या पूछताछ के लिए, आधिकारिक पीओएसबी वेबसाइट पर जाएं:";
+                document.getElementById("form-site-link").innerHTML = "पीओएसबी आधिकारिक वेबसाइट";
+                document.getElementById("significance-title").innerHTML = "पीओएसबी कार्ड का महत्व और उपयोग";
+                document.getElementById("significance-info").innerHTML = "पोस्ट ऑफिस बचत बैंक (पीओएसबी) कार्ड एक वित्तीय साधन है जो व्यक्तियों को बैंकिंग सेवाओं को सुगम बनाने के लिए भारतीय डाक द्वारा प्रदान किया जाता है। इसमें विभिन्न लाभ शामिल हैं:";
+                document.getElementById("benefit1").innerHTML = "सुरक्षित और सुरक्षित बचत खाता";
+                document.getElementById("benefit2").innerHTML = "बचत जमा पर ब्याज";
+                document.getElementById("benefit3").innerHTML = "ग्रामीण क्षेत्रों में बैंकिंग सेवाओं तक पहुँच";
+                document.getElementById("benefit4").innerHTML = "छोटे बचत योजनाएं जैसे पुनरावर्ती जमा, निश्चित जमा इत्यादि।";
+                document.getElementById("benefit5").innerHTML = "रेमिटेंस सेवाएं";
+                document.getElementById("instructions-title").innerHTML = "पीओएसबी कार्ड के लिए आवेदन करने के निर्देश";
+                document.getElementById("download-form-title").innerHTML = "आवेदन पत्र डाउनलोड करें:";
+                document.getElementById("download-form-info").innerHTML = "पीओएसबी खाता खोलने के लिए आवेदन पत्र प्राप्त करने के लिए पीओएसबी वेबसाइट या अपने निकटतम डाकघर पर जाएं। फॉर्म में व्यक्तिगत जानकारी, प्रत्यायन विवरण और अन्य आवश्यक जानकारी के लिए क्षेत्र शामिल होते हैं।";
+                document.getElementById("fill-details-title").innerHTML = "सभी आवश्यक विवरण सटीक रूप से भरें:";
+                document.getElementById("personal-info").innerHTML = "व्यक्तिगत जानकारी: फार्म में दी गई निर्देशों के अनुसार अपना नाम, जन्म तिथि, पता और अन्य संबंधित विवरण भरें।";
+                document.getElementById("nominee-info").innerHTML = "नामांकन विवरण: अपने परिचित के विवरण प्रदान करें जिसमें नाम, संबंध और संपर्क जानकारी शामिल हो।";
+                document.getElementById("deposit-info").innerHTML = "जमा विवरण: प्रारंभिक जमा राशि निर्दिष्ट करें और खाता खोलने के लिए जिस प्रकार का खाता खोलना चाहते हैं, उसे चुनें।";
+                document.getElementById("submit-form-title").innerHTML = "फार्म जमा करें:";
+                document.getElementById("submit-form-info").innerHTML = "जब आपने सभी आवश्यक विवरण भर लिए हों, तो फार्म को अपने निकटतम डाकघर में या पीओएसबी वेबसाइट द्वारा निर्दिष्ट निर्देशों के अनुसार प्रस्तुत करें।";
+                document.getElementById("receive-card-title").innerHTML = "अपना पीओएसबी कार्ड प्राप्त करें:";
+                document.getElementById("receive-card-info").innerHTML = "सत्यापन प्रक्रिया के बाद, आपको आपका पीओएसबी कार्ड जारी किया जाएगा। आप बैंकिंग लेनदेन के लिए इसका उपयोग करना शुरू कर सकते हैं और पीओएसबी द्वारा प्रदान किए जाने वाले लाभों का लाभ उठा सकते हैं।";
+            }
+        </script>
+    </div>
+</body>
+
+</html>
+
