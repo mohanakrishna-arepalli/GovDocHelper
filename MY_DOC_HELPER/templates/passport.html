@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passport - Govdochelper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background-image: url('../static/img/gradient-background-green-modern-designs_343694-2067.avif');
+            background-size: cover;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, p {
+            margin-bottom: 1rem;
+            color: black;
+            text-align: center;
+        }
+        h2, p {
+            margin-bottom: 1rem;
+        }
+        ol {
+            margin-left: 2rem;
+        }
+        ul {
+            margin-left: 2rem;
+            list-style-type: disc;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Language Selection Dropdown -->
+        <select id="language-select" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+        </select>
+
+        <h1 id="main-title">Passport</h1>
+
+        <h2 id="form-site-title">Main Site for Passport Form Filling</h2>
+        <p id="form-site-info">To fill the Passport form and for any updates or queries related to Passport, visit the official Passport Seva website:</p>
+        <p class="center"><a href="https://www.passportindia.gov.in" target="_blank" id="form-site-link">Passport Seva Official Website</a></p>
+
+        <h2 id="significance-title">Significance and Use of Passport</h2>
+        <p id="significance-info">A Passport is an essential document issued by the government that allows an individual to travel internationally. It serves as proof of identity and nationality. Its uses include:</p>
+        <ul>
+            <li id="purpose1">International travel</li>
+            <li id="purpose2">Proof of identity and nationality</li>
+            <li id="purpose3">Verification for visa applications</li>
+            <li id="purpose4">Identification in foreign countries</li>
+        </ul>
+
+        <h2 id="instructions-title">Instructions for Filling Passport Form</h2>
+        <ol>
+            <li><strong id="register-title">Register on the Passport Seva Portal:</strong> <span id="register-info">Visit the Passport Seva portal and register with your personal details to create an account.</span></li>
+            <li><strong id="fill-details-title">Fill in all the Required Details Accurately:</strong>
+                <ul>
+                    <li><strong id="personal-info-title">Personal Information:</strong>
+                        <ul>
+                            <li id="full-name">Full Name: Enter your full name as per your supporting documents.</li>
+                            <li id="dob">Date of Birth: Provide your date of birth in the format DD/MM/YYYY.</li>
+                            <li id="gender">Gender: Select your gender (Male, Female, or Other) as applicable.</li>
+                            <li id="address">Address: Provide your current residential address, including house number, street name, locality, city, district, state, and PIN code.</li>
+                        </ul>
+                    </li>
+                    <li><strong id="additional-info-title">Additional Information:</strong>
+                        <ul>
+                            <li id="contact-info">Contact Information: Provide your mobile number and email address (if applicable).</li>
+                            <li id="aadhar-info">Aadhar Number: Enter your Aadhar number if available.</li>
+                            <li id="parent-info">Parent/Guardian Information: Provide details of your parents or guardians as required.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><strong id="submit-form-title">Submit the Form:</strong> <span id="submit-form-info">Once you have filled in all the required details, submit the form online through the Passport Seva portal. You will receive an application reference number (ARN).</span></li>
+            <li><strong id="pay-fee-title">Pay the Fee:</strong> <span id="pay-fee-info">Pay the required fee online using the available payment options.</span></li>
+            <li><strong id="book-appointment-title">Book an Appointment:</strong> <span id="book-appointment-info">Schedule an appointment at the nearest Passport Seva Kendra (PSK) or Regional Passport Office (RPO).</span></li>
+            <li><strong id="visit-psk-title">Visit the PSK/RPO:</strong> <span id="visit-psk-info">Visit the PSK/RPO on the scheduled date with the required documents for verification and biometrics.</span></li>
+            <li><strong id="track-status-title">Track Application Status:</strong> <span id="track-status-info">Track the status of your application online using the ARN.</span></li>
+            <li><strong id="collect-passport-title">Collect Your Passport:</strong> <span id="collect-passport-info">After the verification process is complete, you will receive your Passport by post.</span></li>
+        </ol>
+
+        <script>
+            function changeLanguage() {
+                var language = document.getElementById("language-select").value;
+                switch (language) {
+                    case "hi":
+                        translateToHindi();
+                        break;
+                    default:
+                        translateToEnglish();
+                }
+            }
+
+            function translateToEnglish() {
+                document.getElementById("main-title").innerHTML = "Passport";
+                document.getElementById("form-site-title").innerHTML = "Main Site for Passport Form Filling";
+                document.getElementById("form-site-info").innerHTML = "To fill the Passport form and for any updates or queries related to Passport, visit the official Passport Seva website:";
+                document.getElementById("form-site-link").innerHTML = "Passport Seva Official Website";
+                document.getElementById("significance-title").innerHTML = "Significance and Use of Passport";
+                document.getElementById("significance-info").innerHTML = "A Passport is an essential document issued by the government that allows an individual to travel internationally. It serves as proof of identity and nationality. Its uses include:";
+                document.getElementById("purpose1").innerHTML = "International travel";
+                document.getElementById("purpose2").innerHTML = "Proof of identity and nationality";
+                document.getElementById("purpose3").innerHTML = "Verification for visa applications";
+                document.getElementById("purpose4").innerHTML = "Identification in foreign countries";
+                document.getElementById("instructions-title").innerHTML = "Instructions for Filling Passport Form";
+                document.getElementById("register-title").innerHTML = "Register on the Passport Seva Portal:";
+                document.getElementById("register-info").innerHTML = "Visit the Passport Seva portal and register with your personal details to create an account.";
+                document.getElementById("fill-details-title").innerHTML = "Fill in all the Required Details Accurately:";
+                document.getElementById("personal-info-title").innerHTML = "Personal Information:";
+                document.getElementById("full-name").innerHTML = "Full Name: Enter your full name as per your supporting documents.";
+                document.getElementById("dob").innerHTML = "Date of Birth: Provide your date of birth in the format DD/MM/YYYY.";
+                document.getElementById("gender").innerHTML = "Gender: Select your gender (Male, Female, or Other) as applicable.";
+                document.getElementById("address").innerHTML = "Address: Provide your current residential address, including house number, street name, locality, city, district, state, and PIN code.";
+                document.getElementById("additional-info-title").innerHTML = "Additional Information:";
+                document.getElementById("contact-info").innerHTML = "Contact Information: Provide your mobile number and email address (if applicable).";
+                document.getElementById("aadhar-info").innerHTML = "Aadhar Number: Enter your Aadhar number if available.";
+                document.getElementById("parent-info").innerHTML = "Parent/Guardian Information: Provide details of your parents or guardians as required.";
+                document.getElementById("submit-form-title").innerHTML = "Submit the Form:";
+                document.getElementById("submit-form-info").innerHTML = "Once you have filled in all the required details, submit the form online through the Passport Seva portal. You will receive an application reference number (ARN).";
+                document.getElementById("pay-fee-title").innerHTML = "Pay the Fee:";
+                document.getElementById("pay-fee-info").innerHTML = "Pay the required fee online using the available payment options.";
+                document.getElementById("book-appointment-title").innerHTML = "Book an Appointment:";
+                document.getElementById("book-appointment-info").innerHTML = "Schedule an appointment at the nearest Passport Seva Kendra (PSK) or Regional Passport Office (RPO).";
+                document.getElementById("visit-psk-title").innerHTML = "Visit the PSK/RPO:";
+                document.getElementById("visit-psk-info").innerHTML = "Visit the PSK/RPO on the scheduled date with the required documents for verification and biometrics.";
+                document.getElementById("track-status-title").innerHTML = "Track Application Status:";
+                document.getElementById("track-status-info").innerHTML = "Track the status of your application online using the ARN.";
+                document.getElementById("collect-passport-title").innerHTML = "Collect Your Passport:";
+                document.getElementById("collect-passport-info").innerHTML = "After the verification process is complete, you will receive your Passport by post.";
+            }
+
+            function translateToHindi() {
+                document.getElementById("main-title").innerHTML = "पासपोर्ट";
+                document.getElementById("form-site-title").innerHTML = "पासपोर्ट फॉर्म भरने के लिए मुख्य साइट";
+                document.getElementById("form-site-info").innerHTML = "पासपोर्ट फॉर्म भरने और पासपोर्ट से संबंधित किसी भी अपडेट या प्रश्नों के लिए, आधिकारिक पासपोर्ट सेवा वेबसाइट पर जाएं:";
+                document.getElementById("form-site-link").innerHTML = "पासपोर्ट सेवा आधिकारिक वेबसाइट";
+                document.getElementById("significance-title").innerHTML = "पासपोर्ट का महत्व और उपयोग";
+                document.getElementById("significance-info").innerHTML = "पासपोर्ट एक महत्वपूर्ण दस्तावेज है जो सरकार द्वारा जारी किया जाता है और यह एक व्यक्ति को अंतर्राष्ट्रीय यात्रा करने की अनुमति देता है। यह पहचान और राष्ट्रीयता का प्रमाण है। इसके उपयोग में शामिल हैं:";
+                document.getElementById("purpose1").innerHTML = "अंतर्राष्ट्रीय यात्रा";
+                document.getElementById("purpose2").innerHTML = "पहचान और राष्ट्रीयता का प्रमाण";
+                document.getElementById("purpose3").innerHTML = "वीजा आवेदनों के लिए सत्यापन";
+                document.getElementById("purpose4").innerHTML = "विदेशी देशों में पहचान";
+                document.getElementById("instructions-title").innerHTML = "पासपोर्ट फॉर्म भरने के निर्देश";
+                document.getElementById("register-title").innerHTML = "पासपोर्ट सेवा पोर्टल पर पंजीकरण करें:";
+                document.getElementById("register-info").innerHTML = "पासपोर्ट सेवा पोर्टल पर जाएं और अपना व्यक्तिगत विवरण दर्ज करके एक खाता बनाएं।";
+                document.getElementById("fill-details-title").innerHTML = "सभी आवश्यक विवरण सही तरीके से भरें:";
+                document.getElementById("personal-info-title").innerHTML = "व्यक्तिगत जानकारी:";
+                document.getElementById("full-name").innerHTML = "पूरा नाम: अपने समर्थन दस्तावेज़ों के अनुसार अपना पूरा नाम दर्ज करें।";
+                document.getElementById("dob").innerHTML = "जन्म तिथि: अपनी जन्म तिथि DD/MM/YYYY प्रारूप में दर्ज करें।";
+                document.getElementById("gender").innerHTML = "लिंग: अपना लिंग चुनें (पुरुष, महिला या अन्य)।";
+                document.getElementById("address").innerHTML = "पता: अपना वर्तमान निवास पता दर्ज करें, जिसमें घर का नंबर, स्ट्रीट नाम, लोकेलिटी, शहर, जिला, राज्य और पिन कोड शामिल हैं।";
+                document.getElementById("additional-info-title").innerHTML = "अतिरिक्त जानकारी:";
+                document.getElementById("contact-info").innerHTML = "संपर्क जानकारी: अपना मोबाइल नंबर और ईमेल पता (यदि लागू हो) प्रदान करें।";
+                document.getElementById("aadhar-info").innerHTML = "आधार नंबर: यदि उपलब्ध हो, तो अपना आधार नंबर दर्ज करें।";
+                document.getElementById("parent-info").innerHTML = "माता-पिता/अभिभावक की जानकारी: आवश्यकतानुसार अपने माता-पिता या अभिभावकों का विवरण प्रदान करें।";
+                document.getElementById("submit-form-title").innerHTML = "फॉर्म जमा करें:";
+                document.getElementById("submit-form-info").innerHTML = "सभी आवश्यक विवरण भरने के बाद, पासपोर्ट सेवा पोर्टल के माध्यम से ऑनलाइन फॉर्म जमा करें। आपको एक आवेदन संदर्भ संख्या (ARN) प्राप्त होगी।";
+                document.getElementById("pay-fee-title").innerHTML = "शुल्क का भुगतान करें:";
+                document.getElementById("pay-fee-info").innerHTML = "उपलब्ध भुगतान विकल्पों का उपयोग करके ऑनलाइन आवश्यक शुल्क का भुगतान करें।";
+                document.getElementById("book-appointment-title").innerHTML = "अपॉइंटमेंट बुक करें:";
+                document.getElementById("book-appointment-info").innerHTML = "निकटतम पासपोर्ट सेवा केंद्र (PSK) या क्षेत्रीय पासपोर्ट कार्यालय (RPO) पर अपॉइंटमेंट शेड्यूल करें।";
+                document.getElementById("visit-psk-title").innerHTML = "PSK/RPO का दौरा करें:";
+                document.getElementById("visit-psk-info").innerHTML = "निर्धारित तिथि पर आवश्यक दस्तावेजों के साथ सत्यापन और बायोमेट्रिक्स के लिए PSK/RPO का दौरा करें।";
+                document.getElementById("track-status-title").innerHTML = "आवेदन की स्थिति ट्रैक करें:";
+                document.getElementById("track-status-info").innerHTML = "ARN का उपयोग करके ऑनलाइन अपने आवेदन की स्थिति ट्रैक करें।";
+                document.getElementById("collect-passport-title").innerHTML = "अपना पासपोर्ट प्राप्त करें:";
+                document.getElementById("collect-passport-info").innerHTML = "सत्यापन प्रक्रिया पूरी होने के बाद, आपको पोस्ट द्वारा अपना पासपोर्ट प्राप्त होगा।";
+            }
+        </script>
+    </div>
+</body>
+</html>

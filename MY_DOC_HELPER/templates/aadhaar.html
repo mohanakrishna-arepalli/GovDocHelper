@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aadhaar Card - Govdochelper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background-image: url('../static/img/gradient-background-green-modern-designs_343694-2067.avif');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1, h2, p {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        h1{
+            text-align: center;
+            text-decoration: underline;
+        }
+        h2 {
+            text-decoration: underline;
+        }
+        ol, ul {
+            margin-left: 1.5rem;
+            padding-left: 1rem;
+        }
+        #logo {
+            position: absolute;
+            
+            width: 100px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+        ul {
+            list-style-type: disc;
+            text-align: left; /* Aligning list items to the left */
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .center {
+            text-align: center;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Language Selection Dropdown -->
+        <select id="language-select" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+        </select>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;   <img id="logo" src="../static/img/logo.png" alt="Logo">>
+
+        <h1 id="main-title">Aadhaar Card</h1>
+
+        <h2 id="form-site-title">Main Site for Aadhaar Form Filling</h2>
+        <p id="form-site-info">To fill the Aadhaar form and for any updates or queries related to Aadhaar, visit the official Aadhaar website:</p>
+        <p class="center"><a href="https://uidai.gov.in" target="_blank" id="form-site-link">UIDAI Official Website</a></p>
+
+        <h2 id="significance-title">Significance and Use of Aadhaar Card</h2>
+        <p id="significance-info">The Aadhaar card is a unique identification number issued by the Unique Identification Authority of India (UIDAI) to all Indian residents. It serves as a proof of identity and address anywhere in India and is required for various purposes including:</p>
+        <ul>
+            <li id="purpose1">Accessing government subsidies and welfare schemes</li>
+            <li id="purpose2">Opening bank accounts and financial transactions</li>
+            <li id="purpose3">Applying for government services and benefits</li>
+            <li id="purpose4">Linking with PAN card for income tax purposes</li>
+            <li id="purpose5">Verifying identity for mobile SIM cards and digital services</li>
+            <li id="purpose6">Participating in government programs and initiatives</li>
+            <li id="purpose7">Providing KYC (Know Your Customer) details for various transactions</li>
+        </ul>
+
+        <h2 id="instructions-title">Instructions for Filling Aadhaar Form</h2>
+        <ol>
+            <li>
+                <strong id="download-form-title">Download the Aadhaar Enrollment Form:</strong>
+                <p id="download-form-info">Visit the UIDAI website or an Aadhaar Enrollment Center to obtain the Aadhaar enrollment form. The enrollment form typically includes fields for personal information, demographic details, and biometric data.</p>
+            </li>
+            <li>
+                <strong id="fill-details-title">Fill in all the Required Details Accurately:</strong>  <br> <br>
+               
+                <ul>
+                    <li>
+                        <strong id="personal-info-title">Personal Information:</strong>
+                        <br>
+                            <id="full-name">Full Name: Enter your full name as per your supporting documents.<br>
+                            <id="dob">Date of Birth: Provide your date of birth in the format DD/MM/YYYY.<br>
+                            <id="gender">Gender: Select your gender (Male, Female, or Other) as applicable.<br>
+                            <id="address">Address: Provide your current residential address, including house number, street name, locality, city, district, state, and PIN code.<br>
+                        
+                    </li>
+                    <br>
+                    <li>
+                        <strong id="demographic-info-title">Demographic Details:</strong>
+                        <br>
+                            <id="father-name">Father's Name: Enter the full name of your father as per his supporting documents.<br>
+                            <id="mother-name">Mother's Name: Enter the full name of your mother as per her supporting documents.<br>
+                            <id="guardian-name">Guardian's Name (if applicable)<br>
+                            <id="contact-info">Contact Information: Provide your mobile number and email address (if applicable).<br>
+                        
+                    </li>
+                    <br>
+                    <li>
+                        <strong id="biometric-title">Biometric Data:</strong>
+                        <br>
+                            <id="fingerprints">Fingerprints: Provide your fingerprints as required.<br>
+                            <id="iris-scan">Iris Scan: Provide your iris scan as required.<br>
+                            <id="photograph">Photograph: Provide a recent passport-sized photograph.<br>
+                    </li>
+                </ul>
+                <br>
+            </li>
+            
+            <li>
+                <strong id="submit-form-title">Submit the Form:</strong>
+                <p id="submit-form-info">Once you have filled in all the required details, submit the form to the Aadhaar Enrollment Center or online through the UIDAI website.</p>
+            </li>
+            <li>
+                <strong id="collect-aadhaar-title">Collect Your Aadhaar Card:</strong>
+                <p id="collect-aadhaar-info">After submitting the form, you will receive your Aadhaar card within 60-90 days. You can also track the status of your Aadhaar application online.</p>
+            </li>
+        </ol>
+    </div>
+
+    <script>
+        function changeLanguage() {
+            var language = document.getElementById("language-select").value;
+            switch (language) {
+                case "hi":
+                    translateToHindi();
+                    break;
+                default:
+                    translateToEnglish();
+            }
+        }
+
+        function translateToEnglish() {
+            document.getElementById("main-title").innerHTML = "Aadhaar Card";
+            document.getElementById("form-site-title").innerHTML = "Main Site for Aadhaar Form Filling";
+            document.getElementById("form-site-info").innerHTML = "To fill the Aadhaar form and for any updates or queries related to Aadhaar, visit the official Aadhaar website:";
+            document.getElementById("form-site-link").innerHTML = "UIDAI Official Website";
+            document.getElementById("significance-title").innerHTML = "Significance and Use of Aadhaar Card";
+            document.getElementById("significance-info").innerHTML = "The Aadhaar card is a unique identification number issued by the Unique Identification Authority of India (UIDAI) to all Indian residents. It serves as a proof of identity and address anywhere in India and is required for various purposes including:";
+            document.getElementById("purpose1").innerHTML = "Accessing government subsidies and welfare schemes";
+            document.getElementById("purpose2").innerHTML = "Opening bank accounts and financial transactions";
+            document.getElementById("purpose3").innerHTML = "Applying for government services and benefits";
+            document.getElementById("purpose4").innerHTML = "Linking with PAN card for income tax purposes";
+            document.getElementById("purpose5").innerHTML = "Verifying identity for mobile SIM cards and digital services";
+            document.getElementById("purpose6").innerHTML = "Participating in government programs and initiatives";
+            document.getElementById("purpose7").innerHTML = "Providing KYC (Know Your Customer) details for various transactions";
+            document.getElementById("instructions-title").innerHTML = "Instructions for Filling Aadhaar Form";
+            document.getElementById("download-form-title").innerHTML = "Download the Aadhaar Enrollment Form:";
+            document.getElementById("download-form-info").innerHTML = "Visit the UIDAI website or an Aadhaar Enrollment Center to obtain the Aadhaar enrollment form. The enrollment form typically includes fields for personal information, demographic details, and biometric data.";
+            document.getElementById("fill-details-title").innerHTML = "Fill in all the Required Details Accurately:";
+            document.getElementById("personal-info-title").innerHTML = "Personal Information:";
+            document.getElementById("full-name").innerHTML = "Full Name: Enter your full name as per your supporting documents.";
+            document.getElementById("dob").innerHTML = "Date of Birth: Provide your date of birth in the format DD/MM/YYYY.";
+            document.getElementById("gender").innerHTML = "Gender: Select your gender (Male, Female, or Other) as applicable.";
+            document.getElementById("address").innerHTML = "Address: Provide your current residential address, including house number, street name, locality, city, district, state, and PIN code.";
+            document.getElementById("demographic-info-title").innerHTML = "Demographic Details:";
+            document.getElementById("father-name").innerHTML = "Father's Name: Enter the full name of your father as per his supporting documents.";
+            document.getElementById("mother-name").innerHTML = "Mother's Name: Enter the full name of your mother as per her supporting documents.";
+            document.getElementById("guardian-name").innerHTML = "Guardian's Name (if applicable)";
+            document.getElementById("contact-info").innerHTML = "Contact Information: Provide your mobile number and email address (if applicable).";
+            document.getElementById("biometric-title").innerHTML = "Biometric Data:";
+            document.getElementById("fingerprints").innerHTML = "Fingerprints: Provide your fingerprints as required.";
+            document.getElementById("iris-scan").innerHTML = "Iris Scan: Provide your iris scan as required.";
+            document.getElementById("photograph").innerHTML = "Photograph: Provide a recent passport-sized photograph.";
+            document.getElementById("submit-form-title").innerHTML = "Submit the Form:";
+            document.getElementById("submit-form-info").innerHTML = "Once you have filled in all the required details, submit the form to the Aadhaar Enrollment Center or online through the UIDAI website.";
+            document.getElementById("collect-aadhaar-title").innerHTML = "Collect Your Aadhaar Card:";
+            document.getElementById("collect-aadhaar-info").innerHTML = "After submitting the form, you will receive your Aadhaar card within 60-90 days. You can also track the status of your Aadhaar application online.";
+        }
+
+        function translateToHindi() {
+            document.getElementById("main-title").innerHTML = "आधार कार्ड";
+            document.getElementById("form-site-title").innerHTML = "आधार फॉर्म भरने के लिए मुख्य साइट";
+            document.getElementById("form-site-info").innerHTML = "आधार फॉर्म भरने और आधार से संबंधित किसी भी अपडेट या प्रश्नों के लिए, आधिकारिक आधार वेबसाइट पर जाएँ:";
+            document.getElementById("form-site-link").innerHTML = "यूआईडीएआई आधिकारिक वेबसाइट";
+            document.getElementById("significance-title").innerHTML = "आधार कार्ड का महत्व और उपयोग";
+            document.getElementById("significance-info").innerHTML = "आधार कार्ड एक अद्वितीय पहचान संख्या है जिसे भारतीय विशिष्ट पहचान प्राधिकरण (यूआईडीएआई) द्वारा सभी भारतीय निवासियों को जारी किया जाता है। यह भारत में कहीं भी पहचान और पते का प्रमाण है और इसे विभिन्न उद्देश्यों के लिए आवश्यक है, जिसमें शामिल हैं:";
+            document.getElementById("purpose1").innerHTML = "सरकारी सब्सिडी और कल्याण योजनाओं तक पहुंच";
+            document.getElementById("purpose2").innerHTML = "बैंक खाते खोलना और वित्तीय लेनदेन";
+            document.getElementById("purpose3").innerHTML = "सरकारी सेवाओं और लाभों के लिए आवेदन करना";
+            document.getElementById("purpose4").innerHTML = "आयकर उद्देश्यों के लिए पैन कार्ड से लिंक करना";
+            document.getElementById("purpose5").innerHTML = "मोबाइल सिम कार्ड और डिजिटल सेवाओं के लिए पहचान सत्यापित करना";
+            document.getElementById("purpose6").innerHTML = "सरकारी कार्यक्रमों और पहलों में भाग लेना";
+            document.getElementById("purpose7").innerHTML = "विभिन्न लेनदेन के लिए केवाईसी (अपने ग्राहक को जानें) विवरण प्रदान करना";
+            document.getElementById("instructions-title").innerHTML = "आधार फॉर्म भरने के लिए निर्देश";
+            document.getElementById("download-form-title").innerHTML = "आधार नामांकन फॉर्म डाउनलोड करें:";
+            document.getElementById("download-form-info").innerHTML = "आधार नामांकन फॉर्म प्राप्त करने के लिए यूआईडीएआई वेबसाइट या आधार नामांकन केंद्र पर जाएँ। नामांकन फॉर्म में आमतौर पर व्यक्तिगत जानकारी, जनसांख्यिकीय विवरण और बायोमेट्रिक डेटा के लिए फ़ील्ड शामिल होते हैं।";
+            document.getElementById("fill-details-title").innerHTML = "सभी आवश्यक विवरण सटीक रूप से भरें:";
+            document.getElementById("personal-info-title").innerHTML = "व्यक्तिगत जानकारी:";
+            document.getElementById("full-name").innerHTML = "पूरा नाम: अपने समर्थन दस्तावेजों के अनुसार अपना पूरा नाम दर्ज करें।";
+            document.getElementById("dob").innerHTML = "जन्म तिथि: अपनी जन्म तिथि DD/MM/YYYY प्रारूप में प्रदान करें।";
+            document.getElementById("gender").innerHTML = "लिंग: अपना लिंग चुनें (पुरुष, महिला या अन्य) जैसा लागू हो।";
+            document.getElementById("address").innerHTML = "पता: अपने घर का नंबर, सड़क का नाम, क्षेत्र, शहर, जिला, राज्य और पिन कोड सहित अपना वर्तमान आवासीय पता प्रदान करें।";
+            document.getElementById("demographic-info-title").innerHTML = "जनसांख्यिकीय विवरण:";
+            document.getElementById("father-name").innerHTML = "पिता का नाम: अपने पिता का पूरा नाम उनके समर्थन दस्तावेजों के अनुसार दर्ज करें।";
+            document.getElementById("mother-name").innerHTML = "माता का नाम: अपनी माता का पूरा नाम उनके समर्थन दस्तावेजों के अनुसार दर्ज करें।";
+            document.getElementById("guardian-name").innerHTML = "अभिभावक का नाम (यदि लागू हो)";
+            document.getElementById("contact-info").innerHTML = "संपर्क जानकारी: अपना मोबाइल नंबर और ईमेल पता (यदि लागू हो) प्रदान करें।";
+            document.getElementById("biometric-title").innerHTML = "बायोमेट्रिक डेटा:";
+            document.getElementById("fingerprints").innerHTML = "उंगलियों के निशान: आवश्यकतानुसार अपने उंगलियों के निशान प्रदान करें।";
+            document.getElementById("iris-scan").innerHTML = "आईरिस स्कैन: आवश्यकतानुसार अपनी आईरिस स्कैन प्रदान करें।";
+            document.getElementById("photograph").innerHTML = "फोटोग्राफ: हाल ही में पासपोर्ट आकार का फोटो प्रदान करें।";
+            document.getElementById("submit-form-title").innerHTML = "फॉर्म जमा करें:";
+            document.getElementById("submit-form-info").innerHTML = "सभी आवश्यक विवरण भरने के बाद, फॉर्म को आधार नामांकन केंद्र या यूआईडीएआई वेबसाइट के माध्यम से ऑनलाइन जमा करें।";
+            document.getElementById("collect-aadhaar-title").innerHTML = "अपना आधार कार्ड प्राप्त करें:";
+            document.getElementById("collect-aadhaar-info").innerHTML = "फॉर्म जमा करने के बाद, आपको 60-90 दिनों के भीतर अपना आधार कार्ड प्राप्त होगा। आप ऑनलाइन अपने आधार आवेदन की स्थिति भी ट्रैक कर सकते हैं।";
+        }
+    </script>
+    <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    <df-messenger
+      project-id="governemnt-bot"
+      agent-id="2c473612-66ff-450c-b015-00f21a41f099"
+      language-code="en"
+      max-query-length="-1">
+      <df-messenger-chat-bubble
+       chat-title="Aadhar card assistance 🤖">
+      </df-messenger-chat-bubble>
+    </df-messenger>
+    <style>
+      df-messenger {
+        z-index: 999;
+        position: fixed;
+        --df-messenger-font-color: #000;
+        --df-messenger-font-family: Google Sans;
+        --df-messenger-chat-background: #C8E6C9;
+        --df-messenger-message-user-background: #90EE90;
+        --df-messenger-message-bot-background: #fff;
+        bottom: 16px;
+        right: 16px;
+      }
+    </style>
+</body>
+</html>

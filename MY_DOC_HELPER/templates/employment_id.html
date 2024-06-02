@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employment Identity Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, p {
+            margin-bottom: 1rem;
+            color: black;
+            text-align: center;
+        }
+        h2, p {
+            margin-bottom: 1rem;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Language Selection Dropdown -->
+        <select id="language-select" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+        </select>
+
+        <h1 id="main-title">Employment Identity Card</h1>
+
+        <h2 id="significance-title">Significance and Use of Employment Identity Card</h2>
+        <p id="significance-info">The employment identity card serves as a proof of employment and is issued by employers to their employees. It is used for various purposes including:</p>
+        <ul>
+            <li id="purpose1">Accessing restricted areas within the workplace</li>
+            <li id="purpose2">Identifying oneself as an employee of the organization</li>
+            <li id="purpose3">Participating in company events and activities</li>
+            <li id="purpose4">Availing employee discounts and benefits</li>
+            <li id="purpose5">Verifying employment status for official purposes</li>
+        </ul>
+
+        <h2 id="instructions-title">Instructions for Obtaining Employment Identity Card</h2>
+        <ol>
+            <li id="contact-hr">Contact Human Resources (HR): <span id="contact-hr-info">Reach out to your organization's HR department to inquire about the process for obtaining an employment identity card.</span></li>
+            <li id="submit-documents">Submit Required Documents: <span id="submit-documents-info">Provide any necessary documents or information as requested by the HR department.</span></li>
+            <li id="photo-session">Photo Session: <span id="photo-session-info">Attend a photo session arranged by the organization for capturing your image for the identity card.</span></li>
+            <li id="card-issuance">Card Issuance: <span id="card-issuance-info">Once the necessary steps are completed, your employment identity card will be issued by the organization.</span></li>
+        </ol>
+
+        <script>
+            function changeLanguage() {
+                var language = document.getElementById("language-select").value;
+                switch (language) {
+                    case "hi":
+                        translateToHindi();
+                        break;
+                    default:
+                        translateToEnglish();
+                }
+            }
+
+            function translateToEnglish() {
+                document.getElementById("main-title").innerHTML = "Employment Identity Card";
+                document.getElementById("significance-title").innerHTML = "Significance and Use of Employment Identity Card";
+                document.getElementById("significance-info").innerHTML = "The employment identity card serves as a proof of employment and is issued by employers to their employees. It is used for various purposes including:";
+                document.getElementById("purpose1").innerHTML = "Accessing restricted areas within the workplace";
+                document.getElementById("purpose2").innerHTML = "Identifying oneself as an employee of the organization";
+                document.getElementById("purpose3").innerHTML = "Participating in company events and activities";
+                document.getElementById("purpose4").innerHTML = "Availing employee discounts and benefits";
+                document.getElementById("purpose5").innerHTML = "Verifying employment status for official purposes";
+                document.getElementById("instructions-title").innerHTML = "Instructions for Obtaining Employment Identity Card";
+                document.getElementById("contact-hr").innerHTML = "Contact Human Resources (HR):";
+                document.getElementById("contact-hr-info").innerHTML = "Reach out to your organization's HR department to inquire about the process for obtaining an employment identity card.";
+                document.getElementById("submit-documents").innerHTML = "Submit Required Documents:";
+                document.getElementById("submit-documents-info").innerHTML = "Provide any necessary documents or information as requested by the HR department.";
+                document.getElementById("photo-session").innerHTML = "Photo Session:";
+                document.getElementById("photo-session-info").innerHTML = "Attend a photo session arranged by the organization for capturing your image for the identity card.";
+                document.getElementById("card-issuance").innerHTML = "Card Issuance:";
+                document.getElementById("card-issuance-info").innerHTML = "Once the necessary steps are completed, your employment identity card will be issued by the organization.";
+            }
+
+            function translateToHindi() {
+                document.getElementById("main-title").innerHTML = "रोजगार पहचान पत्र";
+                document.getElementById("significance-title").innerHTML = "रोजगार पहचान पत्र का महत्व और उपयोग";
+                document.getElementById("significance-info").innerHTML = "रोजगार पहचान पत्र नौकरी का प्रमाण होता है और इसे नियोक्ताओं द्वारा अपने कर्मचारियों को जारी किया जाता है। यह विभिन्न उद्देश्यों के लिए उपयोग किया जाता है, जैसे कि:";
+                document.getElementById("purpose1").innerHTML = "कार्यस्थल में प्रतिबंधित क्षेत्रों तक पहुंच";
+                document.getElementById("purpose2").innerHTML = "संगठन के कर्मचारी के रूप में खुद को पहचानना";
+                document.getElementById("purpose3").innerHTML = "कंपनी के आयोजनों और गतिविधियों में भाग लेना";
+                document.getElementById("purpose4").innerHTML = "कर्मचारी छूट और लाभ प्राप्त करना";
+                document.getElementById("purpose5").innerHTML = "आधिकारिक उद्देश्यों के लिए रोजगार की स्थिति की पुष्टि करना";
+                document.getElementById("instructions-title").innerHTML = "रोजगार पहचान पत्र प्राप्त करने के निर्देश";
+                document.getElementById("contact-hr").innerHTML = "मानव संसाधन (एचआर) से संपर्क करें:";
+                document.getElementById("contact-hr-info").innerHTML = "अपने संगठन के एचआर विभाग से संपर्क करें और रोजगार पहचान पत्र प्राप्त करने की प्रक्रिया के बारे में पूछें।";
+                document.getElementById("submit-documents").innerHTML = "आवश्यक दस्तावेज़ जमा करें:";
+                document.getElementById("submit-documents-info").innerHTML = "एचआर विभाग द्वारा अनुरोधित किसी भी आवश्यक दस्तावेज़ या जानकारी प्रदान करें।";
+                document.getElementById("photo-session").innerHTML = "फोटो सत्र:";
+                document.getElementById("photo-session-info").innerHTML = "पहचान पत्र के लिए आपकी छवि को कैप्चर करने के लिए संगठन द्वारा आयोजित एक फोटो सत्र में भाग लें।";
+                document.getElementById("card-issuance").innerHTML = "पत्र जारी करना:";
+                document.getElementById("card-issuance-info").innerHTML = "जब आवश्यक चरण पूरे हो जाते हैं, तो आपका रोजगार पहचान पत्र संगठन द्वारा जारी किया जाएगा।";
+            }
+        </script>
+    </body>
+</html>
